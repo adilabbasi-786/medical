@@ -1,22 +1,20 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Model from "./components/3Dmodel";
-import FeaturesSection from "./components/feature";
-import Footer from "./components/Footer";
-import Hero from "./components/Hero";
-import InnerSight from "./components/InnerSight";
-import Insigt from "./components/Insigt";
-import Navbar from "./components/Navbar";
+
+import Home from "./pages/Home";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Model />
-      <Insigt />
-      <InnerSight />
-      <FeaturesSection />
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

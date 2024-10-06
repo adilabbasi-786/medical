@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center gap-x-1">
           <a
             className="flex-none text-[#14A09D] focus:outline-none focus:opacity-80 dark:text-white font-poppins text-xl font-semibold leading-7 text-left"
-            href="#"
+            href="/"
             aria-label="Brand"
           >
             Logo
@@ -77,7 +78,7 @@ const Navbar = () => {
                 <div className="flex flex-col md:flex-row md:justify-end md:items-center md:gap-1">
                   <a
                     className="p-2 flex items-center text-[#14A09D] hover:text-[#14A09D] focus:text-[#14A09D] rounded-lg focus:outline-none font-poppins text-sm font-normal leading-5 text-left"
-                    href="#"
+                    href="/"
                     aria-current="page"
                   >
                     Home
@@ -110,11 +111,13 @@ const Navbar = () => {
               </div>
 
               <div className="flex flex-wrap items-center gap-x-1.5 ml-5">
-                <button className="w-[140px] h-[40px] min-w-[140px] p-x-4 gap-x-[8px] rounded-full border border-solid border-[#14A09D] hover:bg-[#14A09D]  group ">
-                  <p className="font-poppins text-sm font-normal leading-7 text-center text-[#14A09D] group-hover:text-white">
-                    Login
-                  </p>
-                </button>
+                <Link to="/login">
+                  <button className="w-[140px] h-[40px] min-w-[140px] p-x-4 gap-x-[8px] rounded-full border border-solid border-[#14A09D] hover:bg-[#14A09D]  group ">
+                    <p className="font-poppins text-sm font-normal leading-7 text-center text-[#14A09D] group-hover:text-white">
+                      Login
+                    </p>
+                  </button>
+                </Link>
                 <button className="w-[140px] h-[40px] min-w-[140px] p-x-4 gap-x-[8px] rounded-full border border-solid border-[#14A09D] bg-[#14A09D] hover:bg-[#0E8F8D]">
                   <p className="font-poppins text-sm font-normal leading-7 text-center text-[#FFFFFF]">
                     Get Started
