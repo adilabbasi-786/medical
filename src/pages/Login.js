@@ -74,13 +74,14 @@ const Login = () => {
                 </Link>
               </div>
             </div>
-
-            <button
-              type="submit"
-              className="bg-teal-500 hover:bg-teal-600 text-white font-medium py-2 px-4 rounded-full w-full h-[56px] text-center focus:outline-none focus:shadow-outline"
-            >
-              Signup
-            </button>
+            <Link to="/dashboard">
+              <button
+                type="submit"
+                className="bg-teal-500 hover:bg-teal-600 text-white font-medium py-2 px-4 rounded-full w-full h-[56px] text-center focus:outline-none focus:shadow-outline"
+              >
+                Signup
+              </button>
+            </Link>
           </form>
 
           <div className="flex items-center justify-center mt-4">

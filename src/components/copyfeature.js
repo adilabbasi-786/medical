@@ -5,9 +5,9 @@ const Features = () => {
     <div className="flex flex-col items-center space-y-8 p-10 px-5 lg:px-20 gap-10 mt-1 w-auto h-auto lg:h-[499px]">
       <h2 className="text-2xl font-semibold">Our Features</h2>
 
-      <div className="flex flex-col lg:flex-row justify-between items-center w-full max-w-4xl space-y-8 lg:space-y-0 lg:space-x-8">
+      <div className="flex flex-col lg:flex-row justify-between items-center w-full max-w-4xl space-y-8 lg:space-y-0 lg:space-x-8 relative">
         {/* Feature 1 */}
-        <div className="flex flex-col items-center text-center space-y-2">
+        <div className="flex flex-col items-center text-center space-y-2 relative">
           <div className="w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center border-b-2 border-green-500">
             {/* Icon (Secure Data Access) */}
             <svg
@@ -32,19 +32,32 @@ const Features = () => {
             </svg>
           </div>
           <h3 className="text-lg font-medium">Secure Data Access</h3>
-          <p className="text-sm text-gray-500 relative padding-bottom-4">
+          <p className="text-sm text-gray-500">
             Inner sight's surgery planning platform is cloud based and secure
-            <span className="absolute bottom-0 left-0 w-full">
-              <div className="h-1 bg-transparent border-b-2 border-[#14A09D] border-dotted rounded-full"></div>
-            </span>
           </p>
+
+          {/* Dotted U-shaped line */}
+          <span className="absolute -bottom-10 w-full flex justify-center">
+            <svg
+              width="200"
+              height="80"
+              viewBox="0 0 200 80"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10,10 Q100,100 190,10"
+                stroke="#14A09D"
+                strokeWidth="2"
+                strokeDasharray="5,5"
+                fill="transparent"
+              />
+            </svg>
+          </span>
         </div>
 
-        {/* Dotted line for large screens */}
-        <div className="hidden lg:block h-px flex-1 bg-dotted bg-blue-200"></div>
-
         {/* Feature 2 */}
-        <div className="flex flex-col items-center text-center space-y-2">
+        <div className="flex flex-col items-center text-center space-y-2 relative">
           <div className="w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center">
             {/* Icon (Hospital Integration) */}
             <svg
@@ -66,13 +79,29 @@ const Features = () => {
           <p className="text-sm text-gray-500">
             We can integrate directly with your hospital PACS
           </p>
+
+          {/* Dotted U-shaped line */}
+          <span className="absolute -bottom-10 w-full flex justify-center">
+            <svg
+              width="200"
+              height="80"
+              viewBox="0 0 200 80"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10,10 Q100,100 190,10"
+                stroke="#14A09D"
+                strokeWidth="2"
+                strokeDasharray="5,5"
+                fill="transparent"
+              />
+            </svg>
+          </span>
         </div>
 
-        {/* Dotted line for large screens */}
-        <div className="hidden lg:block h-px flex-1 bg-dotted bg-blue-200"></div>
-
         {/* Feature 3 */}
-        <div className="flex flex-col items-center text-center space-y-2">
+        <div className="flex flex-col items-center text-center space-y-2 relative">
           <div className="w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center">
             {/* Icon (Fast Turnaround) */}
             <svg
@@ -95,6 +124,25 @@ const Features = () => {
             We offer the fast turnaround - just two working days from receiving
             the scan
           </p>
+
+          {/* Dotted U-shaped line */}
+          <span className="absolute -bottom-10 w-full flex justify-center">
+            <svg
+              width="300"
+              height="180"
+              viewBox="10 10 200 80"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10,10 Q100,100 190,10"
+                stroke="#14A09D"
+                strokeWidth="1"
+                strokeDasharray="5,5"
+                fill="transparent"
+              />
+            </svg>
+          </span>
         </div>
       </div>
     </div>

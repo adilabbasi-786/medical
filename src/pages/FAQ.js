@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import searchbar from "../assests/Icon.png";
+import Faqbackground from "../assests/FAQ background.png";
 
 const FAQ = () => {
   // State to track which accordion is open
@@ -128,11 +129,11 @@ const FAQ = () => {
         </div>
         <div
           class="bg-teal-600 py-12 px-6 text-center rounded-lg"
-          style={
-            {
-              //   backgroundImage: url("path/to/your/topographic-map-background.svg"),
-            }
-          }
+          style={{
+            backgroundImage: `url(${Faqbackground})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
         >
           <h1 class="text-white text-4xl font-bold mb-4">
             Get your first demo 3D model
