@@ -126,6 +126,25 @@ const FAQ = () => {
             ))}
           </div>
         </div>
+        <div
+          class="bg-teal-600 py-12 px-6 text-center rounded-lg"
+          style={
+            {
+              //   backgroundImage: url("path/to/your/topographic-map-background.svg"),
+            }
+          }
+        >
+          <h1 class="text-white text-4xl font-bold mb-4">
+            Get your first demo 3D model
+          </h1>
+          <p class="text-white text-lg mb-8">
+            You can register on our platform by using the Login button above or{" "}
+            <br /> submit your contact details here
+          </p>
+          <button class="bg-white text-teal-500 font-semibold py-3 px-6 rounded-full">
+            Request Demo
+          </button>
+        </div>
       </div>
       <Footer />
     </>
