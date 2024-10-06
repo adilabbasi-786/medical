@@ -111,7 +111,7 @@ const Navbar = () => {
                   </a>
                   <a
                     className="p-4 text-[#28283C] hover:text-[#14A09D] focus:text-[#14A09D] rounded-lg font-poppins text-sm font-normal leading-5 text-left"
-                    href="#"
+                    href="/faq"
                     onClick={closeMenu}
                   >
                     FAQ
