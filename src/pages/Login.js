@@ -67,9 +67,11 @@ const Login = () => {
                     </svg>
                   </span>
                 </div>
-                <p className="text-orange-500 cursor-pointer">
-                  Forget password
-                </p>
+                <Link to="/forgetpassword">
+                  <p className="text-orange-500 cursor-pointer">
+                    Forget password
+                  </p>
+                </Link>
               </div>
             </div>
 
