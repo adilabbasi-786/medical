@@ -1,9 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Aside = () => {
+  const [isOpen, setIsOpen] = useState(false); // State to control the sidebar visibility
+
+  // Function to toggle sidebar visibility
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
-      <aside className="w-64 bg-[#F7F7F7] p-4 rounded-lg shadow-md">
+      {/* Hamburger Icon for Mobile/Tablet View */}
+      <div className="lg:hidden flex justify-between items-center p-4">
+        <h2 className="text-lg font-semibold">Filters</h2>
+        <button
+          onClick={toggleSidebar}
+          className="p-2 focus:outline-none text-gray-500"
+        >
+          {/* Hamburger Icon */}
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      {/* Sidebar - Visible on large screens or when toggled on mobile/tablet */}
+      <aside
+        className={`bg-[#F7F7F7] p-4 rounded-lg shadow-md transition-all duration-300 ease-in-out ${
+          isOpen ? "block" : "hidden"
+        } lg:block lg:w-64 lg:h-full lg:static`}
+        style={{
+          position: isOpen ? "absolute" : "relative",
+          top: isOpen ? 0 : "auto",
+          zIndex: 10,
+        }}
+      >
+        {/* Categories Section */}
         <h2 className="font-semibold mb-4">Categories</h2>
         <div className="space-y-2 mb-6">
           <label className="flex items-center">
@@ -14,7 +57,7 @@ const Aside = () => {
                 accentColor: "#14A09D",
                 backgroundColor: "#14A09D",
               }}
-              checked
+              defaultChecked
             />
             My Cases
           </label>
@@ -31,6 +74,7 @@ const Aside = () => {
           </label>
         </div>
 
+        {/* Organs Section */}
         <h2 className="font-semibold mb-4">Organs</h2>
         <div className="space-y-2">
           <label className="flex items-center">

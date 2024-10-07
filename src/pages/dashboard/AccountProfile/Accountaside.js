@@ -17,7 +17,7 @@ const Aside = () => {
 
   return (
     <>
-      <div className="lg:w-[312px] bg-[#F7F7F7] p-6 mt-8 ml-8 rounded-[10px] w-full lg:h-[456px] h-auto">
+      <div className="lg:w-[312px] bg-[#F7F7F7] p-6  rounded-[10px] w-full lg:h-[456px] h-auto">
         {/* Hamburger Icon for mobile */}
         <div className="lg:hidden flex justify-between items-center mb-4">
           <h2 className="text-lg font-semibold">Account Settings</h2>

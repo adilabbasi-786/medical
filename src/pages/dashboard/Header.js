@@ -34,7 +34,7 @@ const Header = () => {
           {/* Back to Home Link */}
           <a href="/" className="text-teal-500 flex items-center space-x-2">
             <img src={rightarrow} alt="Back arrow" className="w-4 h-4" />
-            <span>Back to home</span>
+            <span className="opacity-0 lg:opacity-100">Back to home</span>
           </a>
         </div>
 

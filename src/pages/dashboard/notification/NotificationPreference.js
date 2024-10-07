@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import AccountHeader from "../AccountProfile/AccountHeader";
 import Aside from "../AccountProfile/Accountaside";
+import ChangeEmailModal from "./ChangeEmailModal";
 
 const NotificationPreference = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <>
       <AccountHeader />
-      <div class=" py-6 px-6 space-x-8 flex flex-col lg:flex-row">
+      <div class=" py-6 lg:px-6 space-x-8 flex flex-col lg:flex-row">
         <Aside />
-        <div class="mx-auto bg-white shadow-md rounded-lg p-6 w-auto lg:w-[979px]">
+        <div class="mx-auto bg-white shadow-md rounded-lg lg:p-6 w-auto lg:w-[979px]">
           {/* <!-- Available Actions Section --> */}
           <h2 class="text-xl font-semibold mb-6">Available Actions</h2>
           <div class="space-y-4">
@@ -23,7 +33,10 @@ const NotificationPreference = () => {
                   </p>
                 </div>
               </div>
-              <button class="bg-[#14A09D] text-white px-4 py-2 rounded-full hover:bg-[#0E8F8D]">
+              <button
+                onClick={openModal}
+                class="bg-[#14A09D] text-white px-4 py-2 ml-5 rounded-full hover:bg-[#0E8F8D] "
+              >
                 Change
               </button>
             </div>
@@ -39,7 +52,7 @@ const NotificationPreference = () => {
                   </p>
                 </div>
               </div>
-              <button class="bg-[#14A09D] text-white px-4 py-2 rounded-full hover:bg-[#0E8F8D]">
+              <button class="bg-[#14A09D] text-white ml-2 px-4 py-2 rounded-full hover:bg-[#0E8F8D]">
                 Enable
               </button>
             </div>
@@ -113,6 +126,7 @@ const NotificationPreference = () => {
           </div>
         </div>
       </div>
+      {isModalOpen && <ChangeEmailModal closeModal={closeModal} />}
     </>
   );
 };

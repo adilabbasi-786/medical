@@ -5,11 +5,11 @@ import jhon from "../../../assests/Ellipse 14.png";
 const AccountProfile = () => {
   return (
     <>
-      <div>
+      <div className="">
         <Header />
-        <div class=" py-6 px-6 space-x-8 flex flex-col lg:flex-row">
+        <div class=" py-6 lg:px-6 lg:space-x-8 flex flex-col lg:flex-row ">
           <Aside />
-          <div class="bg-white lg:p-8 p-0 rounded-lg lg:w-[979px] w-auto  ">
+          <div class="bg-white lg:p-8 rounded-lg lg:w-[979px] w-auto  ">
             {/* <!-- Title --> */}
             <h2 class="text-2xl font-semibold text-black mb-6">
               Account Settings
@@ -19,7 +19,7 @@ const AccountProfile = () => {
             </h2>
 
             {/* <!-- Profile Picture Upload Section --> */}
-            <div class="flex items-center mb-6">
+            <div class="flex items-center mb-6 ">
               <img
                 src={jhon}
                 alt="profile"
