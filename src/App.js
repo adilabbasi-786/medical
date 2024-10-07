@@ -9,6 +9,8 @@ import FAQ from "./pages/FAQ";
 import Dasboardindex from "./pages/dashboard/index";
 import AccountProfile from "./pages/dashboard/AccountProfile/AccountProfile";
 import NotificationPrefernce from "./pages/dashboard/notification/NotificationPreference";
+import Main from "./pages/dashboard/myteams/Main";
+import SecurityPage from "./pages/dashboard/security/SecurityPage";
 function App() {
   return (
     <>
@@ -24,6 +26,11 @@ function App() {
           <Route
             path="/dashboard/profile/notification"
             element={<NotificationPrefernce />}
+          />
+          <Route path="/dashboard/profile/myteams" element={<Main />} />
+          <Route
+            path="/dashboard/profile/security"
+            element={<SecurityPage />}
           />
         </Routes>
       </BrowserRouter>
