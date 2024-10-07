@@ -13,14 +13,18 @@ const Header = () => {
   return (
     <>
       <header className="flex justify-between items-center px-6 py-4 bg-white shadow-md w-full">
-        {/* Back to Home Link */}
-        <a href="/" className="text-teal-500 flex items-center space-x-2">
-          <img src={rightarrow} alt="Back arrow" className="w-4 h-4" />
-          <span>Back to home</span>
-        </a>
+        <div className="w-64">
+          {/* Back to Home Link */}
+          <a href="/" className="text-teal-500 flex items-center space-x-2">
+            <img src={rightarrow} alt="Back arrow" className="w-4 h-4" />
+            <span>Back to home</span>
+          </a>
+        </div>
 
         {/* Title */}
-        <h1 className="text-xl font-semibold">Diary</h1>
+        <div className="w-[979px]">
+          <h1 className="text-xl font-semibold">Diary</h1>
+        </div>
 
         {/* Right-side Icons */}
         <nav className="flex items-center space-x-3">
@@ -46,7 +50,7 @@ const Header = () => {
 
           <button
             type="button"
-            className="p-2 rounded-full hover:bg-gray-100 focus:outline-none"
+            className="p-2  bg-[#14A09D] text-white rounded-full focus:outline-none"
           >
             <svg
               className="w-5 h-5"
@@ -99,26 +103,26 @@ const Header = () => {
             <div
               className={`${
                 dropdownOpen ? "block" : "hidden"
-              } absolute right-0 mt-10 w-48 bg-white shadow-lg rounded-lg py-2`}
+              } absolute right-0 mt-12 w-40 bg-white shadow-lg rounded-lg py-2`}
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="dropdown-account"
             >
               <a
-                href="#"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                Signed in as james@site.com
-              </a>
-              <a
-                href="#"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                href="/dashboard/profile"
+                className="block px-4 py-2 text-sm text-gray-700  hover:bg-[#14A09D] hover:text-white"
               >
                 Profile
               </a>
               <a
                 href="#"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#14A09D] hover:text-white"
+              >
+                About
+              </a>
+              <a
+                href="#"
+                className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#14A09D] hover:text-white"
               >
                 Logout
               </a>

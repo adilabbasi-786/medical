@@ -46,7 +46,7 @@ const MainContent = () => {
                   ></path>
                 </svg>
               </button>
-              <button class="p-2 bg-teal-500 text-white rounded-full">
+              <button class="p-2 bg-[#14A09D] text-white rounded-full">
                 + Add Case
               </button>
             </div>
@@ -66,7 +66,7 @@ const MainContent = () => {
                     <h3 class="text-lg font-semibold">Example Colon</h3>
                     <p class="text-sm text-gray-500">Right colon Cancer</p>
                   </div>
-                  <span class="bg-green-100 text-green-600 text-sm px-2 py-1 mt-[-80px] rounded-full">
+                  <span class="bg-[#4BB54329] text-green-600 text-sm px-2 py-1 mt-[-80px] rounded-full">
                     Case Published
                   </span>
                 </div>
@@ -88,7 +88,7 @@ const MainContent = () => {
                   <span class="text-sm">Set due date</span>
                 </button>
               </div>
-              <button class="p-2 bg-teal-500 text-white rounded-full self-end mt-[-50px] w-[120px] h-[40px]">
+              <button class="p-2 bg-[#14A09D] text-white rounded-full self-end mt-[-50px] w-[120px] h-[40px]">
                 Detail
               </button>
             </div>
@@ -104,7 +104,7 @@ const MainContent = () => {
                     <h3 class="text-lg font-semibold">Example Colon</h3>
                     <p class="text-sm text-gray-500">Right colon Cancer</p>
                   </div>
-                  <span class="bg-green-100 text-green-600 text-sm px-2 py-1 mt-[-80px] rounded-full">
+                  <span class="bg-[#4BB54329] text-green-600 text-sm px-2 py-1 mt-[-80px] rounded-full">
                     Case Published
                   </span>
                 </div>
@@ -126,7 +126,7 @@ const MainContent = () => {
                   <span class="text-sm">Set due date</span>
                 </button>
               </div>
-              <button class="p-2 bg-teal-500 text-white rounded-full self-end mt-[-50px] w-[120px] h-[40px]">
+              <button class="p-2 bg-[#14A09D] text-white rounded-full self-end mt-[-50px] w-[120px] h-[40px]">
                 Detail
               </button>
             </div>
@@ -142,7 +142,7 @@ const MainContent = () => {
                     <h3 class="text-lg font-semibold">Example Colon</h3>
                     <p class="text-sm text-gray-500">Right colon Cancer</p>
                   </div>
-                  <span class="bg-green-100 text-green-600 text-sm px-2 py-1 mt-[-80px] rounded-full">
+                  <span class="bg-[#4BB54329] text-green-600 text-sm px-2 py-1 mt-[-80px] rounded-full">
                     Case Published
                   </span>
                 </div>
@@ -164,7 +164,7 @@ const MainContent = () => {
                   <span class="text-sm">Set due date</span>
                 </button>
               </div>
-              <button class="p-2 bg-teal-500 text-white rounded-full self-end mt-[-50px] w-[120px] h-[40px]">
+              <button class="p-2 bg-[#14A09D] text-white rounded-full self-end mt-[-50px] w-[120px] h-[40px]">
                 Detail
               </button>
             </div>
@@ -174,16 +174,24 @@ const MainContent = () => {
 
           {/* Pagination */}
           <div class="flex justify-center mt-6 space-x-2">
-            <button class="px-3 py-1 bg-white border rounded-full">
+            <button class="px-3 py-1 bg-white border rounded-full hover:bg-[#14A09D] hover:text-white">
               Previous
             </button>
-            <button class="px-3 py-1 bg-teal-500 text-white rounded-full">
+            <button class="px-3 py-1 bg-[#14A09D] text-white rounded-full w-[40px] h-[40px]">
               1
             </button>
-            <button class="px-3 py-1 bg-white border rounded-full">2</button>
-            <button class="px-3 py-1 bg-white border rounded-full">3</button>
-            <button class="px-3 py-1 bg-white border rounded-full">4</button>
-            <button class="px-3 py-1 bg-white border rounded-full">Next</button>
+            <button class="px-3 py-1 bg-white border rounded-full w-[40px] h-[40px] hover:bg-[#14A09D] hover:text-white">
+              2
+            </button>
+            <button class="px-3 py-1 bg-white border rounded-full w-[40px] h-[40px] hover:bg-[#14A09D] hover:text-white">
+              3
+            </button>
+            <button class="px-3 py-1 bg-white border rounded-full w-[40px] h-[40px] hover:bg-[#14A09D] hover:text-white">
+              4
+            </button>
+            <button class="px-3 py-1 bg-white border rounded-full hover:bg-[#14A09D] hover:text-white">
+              Next
+            </button>
           </div>
         </div>
       </div>

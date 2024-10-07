@@ -7,6 +7,8 @@ import Login from "./pages/Login";
 import ForgetPassword from "./pages/ForgetPassword";
 import FAQ from "./pages/FAQ";
 import Dasboardindex from "./pages/dashboard/index";
+import AccountProfile from "./pages/dashboard/AccountProfile/AccountProfile";
+import NotificationPrefernce from "./pages/dashboard/notification/NotificationPreference";
 function App() {
   return (
     <>
@@ -18,6 +20,11 @@ function App() {
           <Route path="/forgetpassword" element={<ForgetPassword />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/dashboard" element={<Dasboardindex />} />
+          <Route path="/dashboard/profile" element={<AccountProfile />} />
+          <Route
+            path="/dashboard/profile/notification"
+            element={<NotificationPrefernce />}
+          />
         </Routes>
       </BrowserRouter>
     </>
