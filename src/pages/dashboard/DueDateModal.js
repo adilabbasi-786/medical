@@ -9,7 +9,7 @@ const DueDateModal = ({ closeModal }) => {
     <>
       {/* Modal Backdrop */}
       <div
-        className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50"
+        className="fixed inset-0 bg-black bg-opacity-80  flex justify-center items-center z-50"
         onClick={closeModal} // Close modal on backdrop click
       >
         {/* Modal Content */}

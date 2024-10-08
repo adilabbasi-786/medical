@@ -3,9 +3,11 @@ import Aside from "./aside";
 import search from "../../assests/search.png";
 import Examcolo from "../../assests/exmple colo.png";
 import DueDateModal from "./DueDateModal";
+import AddCaseModal from "./AddCaseModal";
 
 const MainContent = () => {
   const [isDuedateModalOpen, setIsDuedateModalOpen] = useState(false);
+  const [isAddCaseModalOpen, setIsAddCaseModalOpen] = useState(false);
 
   const openModal = () => {
     setIsDuedateModalOpen(true);
@@ -13,6 +15,13 @@ const MainContent = () => {
 
   const closeModal = () => {
     setIsDuedateModalOpen(false);
+  };
+  const openAddCaseModal = () => {
+    setIsAddCaseModalOpen(true);
+  };
+
+  const closeAddCaseModal = () => {
+    setIsAddCaseModalOpen(false);
   };
   return (
     <>
@@ -38,7 +47,7 @@ const MainContent = () => {
                 />
               </div>
             </div>
-            <div className="lg:flex space-x-4">
+            <div className="lg:flex lg:space-x-4 lg:mt-0 mt-4">
               <button className="flex items-center space-x-1 p-2 border rounded-full">
                 <span>Sort by</span>
                 <svg
@@ -56,7 +65,10 @@ const MainContent = () => {
                   ></path>
                 </svg>
               </button>
-              <button className="p-2 bg-[#14A09D] text-white rounded-full">
+              <button
+                onClick={openAddCaseModal}
+                className="p-2 bg-[#14A09D] text-white rounded-full"
+              >
                 + Add Case
               </button>
             </div>
@@ -77,12 +89,12 @@ const MainContent = () => {
                     <h3 className="text-lg font-semibold">Example Colon</h3>
                     <p className="text-sm text-gray-500">Right colon Cancer</p>
                   </div>
-                  <span className="bg-[#4BB54329] text-green-600 text-sm px-2 py-1 rounded-full">
+                  <span className="bg-[#4BB54329] text-green-600 text-sm px-2 py-1  rounded-full">
                     Case Published
                   </span>
                 </div>
 
-                <button className="flex items-center space-x-1 p-2 border rounded-full self-center lg:self-start">
+                <button className="flex items-center space-x-1 p-2 border rounded-full self-center lg:self-start mt-4 lg:mt-0">
                   <svg
                     className="w-5 h-5 text-teal-500"
                     fill="none"
@@ -118,12 +130,12 @@ const MainContent = () => {
                     <h3 className="text-lg font-semibold">Example Colon</h3>
                     <p className="text-sm text-gray-500">Right colon Cancer</p>
                   </div>
-                  <span className="bg-[#4BB54329] text-green-600 text-sm px-2 py-1 rounded-full">
+                  <span className="bg-[#4BB54329] text-green-600 text-sm px-2 py-1  rounded-full">
                     Case Published
                   </span>
                 </div>
 
-                <button className="flex items-center space-x-1 p-2 border rounded-full self-center lg:self-start">
+                <button className="flex items-center space-x-1 p-2 border rounded-full self-center lg:self-start mt-4 lg:mt-0">
                   <svg
                     className="w-5 h-5 text-teal-500"
                     fill="none"
@@ -138,7 +150,9 @@ const MainContent = () => {
                       d="M8 7V3m8 4V3M5 12h14m-7 9v-5m-5 5h10"
                     ></path>
                   </svg>
-                  <span className="text-sm">Set due date</span>
+                  <button onClick={openModal}>
+                    <span className="text-sm">Set due date</span>
+                  </button>
                 </button>
               </div>
               <button className="p-2 bg-[#14A09D] text-white rounded-full self-center lg:self-end lg:mt-[-50px] w-full lg:w-[120px] h-[40px]">
@@ -157,12 +171,12 @@ const MainContent = () => {
                     <h3 className="text-lg font-semibold">Example Colon</h3>
                     <p className="text-sm text-gray-500">Right colon Cancer</p>
                   </div>
-                  <span className="bg-[#4BB54329] text-green-600 text-sm px-2 py-1 rounded-full">
+                  <span className="bg-[#4BB54329] text-green-600 text-sm px-2 py-1  rounded-full">
                     Case Published
                   </span>
                 </div>
 
-                <button className="flex items-center space-x-1 p-2 border rounded-full self-center lg:self-start">
+                <button className="flex items-center space-x-1 p-2 border rounded-full self-center lg:self-start mt-4 lg:mt-0">
                   <svg
                     className="w-5 h-5 text-teal-500"
                     fill="none"
@@ -177,7 +191,9 @@ const MainContent = () => {
                       d="M8 7V3m8 4V3M5 12h14m-7 9v-5m-5 5h10"
                     ></path>
                   </svg>
-                  <span className="text-sm">Set due date</span>
+                  <button onClick={openModal}>
+                    <span className="text-sm">Set due date</span>
+                  </button>
                 </button>
               </div>
               <button className="p-2 bg-[#14A09D] text-white rounded-full self-center lg:self-end lg:mt-[-50px] w-full lg:w-[120px] h-[40px]">
@@ -196,12 +212,12 @@ const MainContent = () => {
                     <h3 className="text-lg font-semibold">Example Colon</h3>
                     <p className="text-sm text-gray-500">Right colon Cancer</p>
                   </div>
-                  <span className="bg-[#4BB54329] text-green-600 text-sm px-2 py-1 rounded-full">
+                  <span className="bg-[#4BB54329] text-green-600 text-sm px-2 py-1  rounded-full">
                     Case Published
                   </span>
                 </div>
 
-                <button className="flex items-center space-x-1 p-2 border rounded-full self-center lg:self-start">
+                <button className="flex items-center space-x-1 p-2 border rounded-full self-center lg:self-start mt-4 lg:mt-0">
                   <svg
                     className="w-5 h-5 text-teal-500"
                     fill="none"
@@ -216,7 +232,9 @@ const MainContent = () => {
                       d="M8 7V3m8 4V3M5 12h14m-7 9v-5m-5 5h10"
                     ></path>
                   </svg>
-                  <span className="text-sm">Set due date</span>
+                  <button onClick={openModal}>
+                    <span className="text-sm">Set due date</span>
+                  </button>
                 </button>
               </div>
               <button className="p-2 bg-[#14A09D] text-white rounded-full self-center lg:self-end lg:mt-[-50px] w-full lg:w-[120px] h-[40px]">
@@ -248,6 +266,9 @@ const MainContent = () => {
         </div>
       </div>
       {isDuedateModalOpen && <DueDateModal closeModal={closeModal} />}
+      {isAddCaseModalOpen && (
+        <AddCaseModal closeAddCaseModal={closeAddCaseModal} />
+      )}
     </>
   );
 };

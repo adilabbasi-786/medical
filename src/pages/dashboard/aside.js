@@ -44,7 +44,7 @@ const Aside = () => {
           position: isOpen ? "fixed" : "relative",
           top: isOpen ? 0 : "auto",
           left: isOpen ? 0 : "auto",
-          zIndex: 10,
+
           width: isOpen ? "100vw" : "auto",
         }}
       >

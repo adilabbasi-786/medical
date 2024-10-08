@@ -29,7 +29,7 @@ body {
 /* Remove the border around the calendar */
 .react-datepicker {
   border: none !important; /* Remove the border */
-  box-shadow: none !important; /* Optionally remove the shadow if present */
+  box-shadow: none !important;
 }
 
 /* Optional: Remove border from calendar days */
