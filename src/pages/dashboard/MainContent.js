@@ -4,8 +4,10 @@ import search from "../../assests/search.png";
 import Examcolo from "../../assests/exmple colo.png";
 import DueDateModal from "./DueDateModal";
 import AddCaseModal from "./AddCaseModal";
+import { Link, useNavigate } from "react-router-dom";
 
 const MainContent = () => {
+  const navigate = useNavigate();
   const [isDuedateModalOpen, setIsDuedateModalOpen] = useState(false);
   const [isAddCaseModalOpen, setIsAddCaseModalOpen] = useState(false);
 
@@ -114,7 +116,10 @@ const MainContent = () => {
                   </button>
                 </button>
               </div>
-              <button className="p-2 bg-[#14A09D] text-white rounded-full self-center lg:self-end lg:mt-[-50px] w-full lg:w-[120px] h-[40px]">
+              <button
+                onClick={() => navigate("/dashboard/details")}
+                className="p-2 bg-[#14A09D] text-white rounded-full self-center lg:self-end lg:mt-[-50px] w-full lg:w-[120px] h-[40px]"
+              >
                 Detail
               </button>
             </div>
@@ -155,7 +160,10 @@ const MainContent = () => {
                   </button>
                 </button>
               </div>
-              <button className="p-2 bg-[#14A09D] text-white rounded-full self-center lg:self-end lg:mt-[-50px] w-full lg:w-[120px] h-[40px]">
+              <button
+                onClick={() => navigate("/dashboard/details")}
+                className="p-2 bg-[#14A09D] text-white rounded-full self-center lg:self-end lg:mt-[-50px] w-full lg:w-[120px] h-[40px]"
+              >
                 Detail
               </button>
             </div>
@@ -196,7 +204,10 @@ const MainContent = () => {
                   </button>
                 </button>
               </div>
-              <button className="p-2 bg-[#14A09D] text-white rounded-full self-center lg:self-end lg:mt-[-50px] w-full lg:w-[120px] h-[40px]">
+              <button
+                onClick={() => navigate("/dashboard/details")}
+                className="p-2 bg-[#14A09D] text-white rounded-full self-center lg:self-end lg:mt-[-50px] w-full lg:w-[120px] h-[40px]"
+              >
                 Detail
               </button>
             </div>
@@ -237,7 +248,10 @@ const MainContent = () => {
                   </button>
                 </button>
               </div>
-              <button className="p-2 bg-[#14A09D] text-white rounded-full self-center lg:self-end lg:mt-[-50px] w-full lg:w-[120px] h-[40px]">
+              <button
+                onClick={() => navigate("/dashboard/details")}
+                className="p-2 bg-[#14A09D] text-white rounded-full self-center lg:self-end lg:mt-[-50px] w-full lg:w-[120px] h-[40px]"
+              >
                 Detail
               </button>
             </div>
