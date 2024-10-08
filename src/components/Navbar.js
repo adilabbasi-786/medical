@@ -102,13 +102,13 @@ const Navbar = () => {
                   >
                     Research
                   </a>
-                  <a
+                  <Link
                     className="p-4 text-[#28283C] hover:text-[#14A09D] focus:text-[#14A09D] rounded-lg font-poppins text-sm font-normal leading-5 text-left"
-                    href="#"
+                    to="/aboutus"
                     onClick={closeMenu}
                   >
                     Contact
-                  </a>
+                  </Link>
                   <a
                     className="p-4 text-[#28283C] hover:text-[#14A09D] focus:text-[#14A09D] rounded-lg font-poppins text-sm font-normal leading-5 text-left"
                     href="/faq"

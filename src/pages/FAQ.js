@@ -128,7 +128,7 @@ const FAQ = () => {
           </div>
         </div>
         <div
-          class="bg-teal-600 py-12 px-6 text-center rounded-lg"
+          class="bg-[#14A09D] py-12 px-6 text-center rounded-lg"
           style={{
             backgroundImage: `url(${Faqbackground})`,
             backgroundSize: "cover",
