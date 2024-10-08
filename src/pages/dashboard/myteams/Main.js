@@ -15,6 +15,7 @@ const Main = () => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
   // State to manage which row's dropdown is active
   const [activeDropdown, setActiveDropdown] = useState(null);
 
@@ -30,12 +31,14 @@ const Main = () => {
   return (
     <>
       <Header />
-      <div className="py-6 lg:px-6 lg:space-x-8 flex flex-col lg:flex-row">
+      <div className="py-6 px-4 lg:px-6 lg:space-x-8 flex flex-col lg:flex-row">
         <Aside />
-        <div className="p-6 bg-gray-50  w-[1200px]">
-          {/* <!-- Header Section --> */}
-          <div className="flex justify-between items-center mb-6 w-[1058px]">
-            <h1 className="text-2xl font-semibold text-gray-800">My Team</h1>
+        <div className="p-4 lg:p-6 bg-gray-50 w-full lg:w-[1200px]">
+          {/* Header Section */}
+          <div className="flex justify-between items-center mb-6 w-full lg:w-[1058px]">
+            <h1 className="text-xl lg:text-2xl font-semibold text-gray-800">
+              My Team
+            </h1>
             <button
               onClick={openModal}
               className="bg-teal-500 text-white py-2 px-4 rounded-full hover:bg-teal-600"
@@ -44,9 +47,9 @@ const Main = () => {
             </button>
           </div>
 
-          {/* <!-- Search and Table --> */}
+          {/* Search and Table */}
           <div className="bg-white shadow rounded-lg overflow-hidden">
-            {/* <!-- Search Bar --> */}
+            {/* Search Bar */}
             <div className="p-4 border-b">
               <input
                 type="text"
@@ -55,7 +58,7 @@ const Main = () => {
               />
             </div>
 
-            {/* <!-- Team Table --> */}
+            {/* Team Table */}
             <div className="overflow-x-auto">
               <table className="min-w-full table-auto text-left">
                 <thead>
@@ -67,36 +70,41 @@ const Main = () => {
                   </tr>
                 </thead>
                 <tbody className="text-gray-700">
-                  {/* <!-- Repeatable Row --> */}
                   {[...Array(5)].map((_, index) => (
                     <tr className="border-b" key={index}>
                       <td className="p-4 flex items-center">
                         <img
                           src={userimg}
                           alt="Profile"
-                          className="w-10 h-10 rounded-full mr-3"
+                          className="w-8 h-8 lg:w-10 lg:h-10 rounded-full mr-3"
                         />
-                        Loki Bright
+                        <span className="text-sm lg:text-base">
+                          Loki Bright
+                        </span>
                       </td>
-                      <td className="p-4">lokibright@gmail.com</td>
+                      <td className="p-8  text-sm lg:text-base">
+                        lokibright@gmail.com
+                      </td>
                       <td className="p-4">
                         <div className="flex items-center space-x-1">
                           <img
                             src={userimg}
                             alt="Colleague"
-                            className="w-6 h-6 rounded-full"
+                            className="w-5 h-5 lg:w-6 lg:h-6 rounded-full"
                           />
                           <img
                             src={userimg}
                             alt="Colleague"
-                            className="w-6 h-6 rounded-full"
+                            className="w-5 h-5 lg:w-6 lg:h-6 rounded-full"
                           />
                           <img
                             src={userimg}
                             alt="Colleague"
-                            className="w-6 h-6 rounded-full"
+                            className="w-5 h-5 lg:w-6 lg:h-6 rounded-full"
                           />
-                          <span className="text-sm font-semibold">+4</span>
+                          <span className="text-xs lg:text-sm font-semibold">
+                            +4
+                          </span>
                         </div>
                       </td>
                       <td className="p-4 text-right relative">
@@ -105,7 +113,7 @@ const Main = () => {
                           className="relative text-gray-600 hover:text-gray-900 focus:outline-none"
                         >
                           <svg
-                            className="w-6 h-6"
+                            className="w-5 h-5 lg:w-6 lg:h-6"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -120,7 +128,7 @@ const Main = () => {
                           </svg>
                         </button>
 
-                        {/* <!-- Dropdown Menu --> */}
+                        {/* Dropdown Menu */}
                         {activeDropdown === index && (
                           <div className="absolute right-0 mt-2 w-24 bg-white shadow-md rounded-lg z-10">
                             <button className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
@@ -162,7 +170,6 @@ const Main = () => {
                       </td>
                     </tr>
                   ))}
-                  {/* <!-- Repeat similar rows for other team members --> */}
                 </tbody>
               </table>
             </div>
