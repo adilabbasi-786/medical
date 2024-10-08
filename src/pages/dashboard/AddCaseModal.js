@@ -1,17 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import uploadimage from "../../assests/upload icon.png";
 
 const AddCaseModal = ({ closeAddCaseModal }) => {
   const [fileUploaded, setFileUploaded] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const [progress, setProgress] = useState(0);
 
-  const handleFileUpload = (event) => {
-    // Simulate file upload process
+  const handleFileUpload = () => {
     setUploading(true);
-    setTimeout(() => {
-      setUploading(false);
-      setFileUploaded(true);
-    }, 2000); // Simulate a 2-second upload time
+    setFileUploaded(false);
+    setProgress(0);
+
+    // Simulate file upload with progress
+    const interval = setInterval(() => {
+      setProgress((prevProgress) => {
+        if (prevProgress >= 100) {
+          clearInterval(interval);
+          setUploading(false);
+          setFileUploaded(true);
+          return 100;
+        }
+        return prevProgress + 10; // Increase by 10% every 200ms
+      });
+    }, 200);
   };
 
   return (
@@ -136,21 +147,28 @@ const AddCaseModal = ({ closeAddCaseModal }) => {
                 </div>
               </div>
             </div>
-            {/* Progress Line */}
+
+            {/* Progress Bar */}
             {uploading && (
               <div className="mt-4">
                 <div className="w-full h-1 bg-gray-300">
-                  <div className="h-1 bg-teal-500 w-1/2 animate-pulse"></div>
+                  <div
+                    className="h-1 bg-teal-500"
+                    style={{ width: `${progress}%` }}
+                  ></div>
                 </div>
-                <p className="mt-2 text-gray-500">Uploading...</p>
+                <p className="mt-2 text-gray-500">Uploading... {progress}%</p>
               </div>
             )}
 
             {/* Success Message */}
             {fileUploaded && !uploading && (
-              <p className="mt-2 text-green-600 font-bold">
-                Upload successful!
-              </p>
+              <div className="mt-4">
+                <div className="w-full h-1 bg-teal-500"></div>
+                <p className="mt-2 text-green-600 font-bold">
+                  Upload successful!
+                </p>
+              </div>
             )}
 
             {/* Buttons */}
