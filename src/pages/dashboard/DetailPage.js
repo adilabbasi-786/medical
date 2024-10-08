@@ -74,7 +74,7 @@ const DetailPage = () => {
 
         {/* Main 3D Model Viewer */}
         <div className="col-span-4 relative ">
-          <div className="absolute top-4 right-0 flex space-x-4 bg-black ">
+          <div className="absolute top-4 right-0 flex space-x-4 bg-black  ">
             {/* Toggle Switch */}
             <label className="relative inline-flex items-center cursor-pointer">
               <input

@@ -14,6 +14,7 @@ import SecurityPage from "./pages/dashboard/security/SecurityPage";
 import DueDateModal from "./pages/dashboard/DueDateModal";
 import About from "./pages/About";
 import DetailPage from "./pages/dashboard/DetailPage";
+import DetailImageDashboard from "./pages/dashboard/DetailImageDashboard";
 function App() {
   return (
     <>
@@ -29,6 +30,10 @@ function App() {
           <Route path="/dashboard/profile" element={<AccountProfile />} />
           <Route path="/dashboard/duedate" element={<DueDateModal />} />
           <Route path="/dashboard/details" element={<DetailPage />} />
+          <Route
+            path="/dashboard/detailimagedashboard"
+            element={<DetailImageDashboard />}
+          />
           <Route
             path="/dashboard/profile/notification"
             element={<NotificationPrefernce />}
