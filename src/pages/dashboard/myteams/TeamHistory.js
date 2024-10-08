@@ -1,45 +1,39 @@
-import React from "react";
+import * as React from "react";
+import { LineChart } from "@mui/x-charts/LineChart";
 
-const TeamHistory = () => {
+const uData = [
+  4000, 5000, 5000, 3000, 3000, 1000, 2000, 2780, 1890, 2390, 3490,
+];
+const xLabels = [
+  "Jan",
+  "Feb",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+export default function SimpleLineChart() {
   return (
-    <>
-      <div class="p-4 md:p-5 min-h-[410px] flex flex-col bg-white border shadow-sm rounded-xl dark:bg-neutral-800 dark:border-neutral-700">
-        <div class="flex justify-between items-center">
-          <div>
-            <h2 class="text-sm text-gray-500 dark:text-neutral-500">
-              Visitors
-            </h2>
-            <p class="text-xl sm:text-2xl font-medium text-gray-800 dark:text-neutral-200">
-              80.3k
-            </p>
-          </div>
-
-          <div>
-            <span class="py-[5px] px-1.5 inline-flex items-center gap-x-1 text-xs font-medium rounded-md bg-red-100 text-red-800 dark:bg-red-500/10 dark:text-red-500">
-              <svg
-                class="inline-block size-3.5"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M12 5v14" />
-                <path d="m19 12-7 7-7-7" />
-              </svg>
-              2%
-            </span>
-          </div>
-        </div>
-
-        <div id="hs-single-area-chart"></div>
-      </div>
-    </>
+    <div className="lg:ml-[350px] ml-0 overflow-x-auto">
+      <h1 className="text-2xl font-semibold font-poppins leading-none text-left">
+        Team History
+      </h1>
+      <p className="text-lg font-normal font-poppins leading-7 text-left ">
+        Total number of cases in last year: 0
+      </p>
+      <LineChart
+        width={1058}
+        height={400}
+        series={[{ data: uData, label: "cases" }]}
+        xAxis={[{ scaleType: "point", data: xLabels }]}
+      />
+    </div>
   );
-};
-
-export default TeamHistory;
+}
