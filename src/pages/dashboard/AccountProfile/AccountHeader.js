@@ -32,7 +32,10 @@ const Header = () => {
       <header className="flex justify-between items-center px-6 py-4 bg-white shadow-md w-full">
         <div className="w-64">
           {/* Back to Home Link */}
-          <a href="/" className="text-teal-500 flex items-center space-x-2">
+          <a
+            href="/dashboard"
+            className="text-teal-500 flex items-center space-x-2"
+          >
             <img src={rightarrow} alt="Back arrow" className="w-4 h-4" />
             <span className="opacity-0 lg:opacity-100">Back to home</span>
           </a>

@@ -46,7 +46,7 @@ const Header = () => {
         {/* Right-side Icons */}
         <nav className="flex items-center space-x-3">
           {/* Notification Dropdown */}
-          <div className="relative inline-flex">
+          <div className="relative inline-flex border rounded-full ">
             <button
               type="button"
               className="p-2 bg-[#14A09D] text-white rounded-full focus:outline-none"
@@ -65,6 +65,11 @@ const Header = () => {
                 <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
                 <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
               </svg>
+              {notifications.length > 0 && (
+                <span className="absolute bottom-6 left-6 bg-[#14A09D]  hover:bg-teal-600 text-white rounded-full h-4 w-4 text-xs flex items-center justify-center">
+                  {notifications.length}
+                </span>
+              )}
               <span className="sr-only">Notifications</span>
             </button>
 
@@ -72,19 +77,19 @@ const Header = () => {
             <div
               className={`${
                 notificationDropdownOpen ? "block" : "hidden"
-              } absolute right-0 mt-12 w-[524px] bg-white shadow-lg rounded-lg py-2`}
+              } absolute right-[-80px] mt-12 lg:w-[524px] w-[350px] flex flex-col bg-white shadow-lg rounded-lg py-2`}
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="dropdown-notification"
             >
-              <h3 className="px-4 py-2 text-md font-semibold text-gray-800">
+              <h3 className="px-4 py-2 text-md lg:ml-0  ml-[100px]  font-semibold text-gray-800">
                 Notifications
               </h3>
               <ul>
                 {notifications.map((notification, index) => (
                   <li
                     key={index}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    className=" px-1 lg:ml-0  ml-[50px] py-2 text-sm text-gray-700 hover:bg-gray-100"
                   >
                     <div className="flex justify-between">
                       <span>{notification.title}</span>
@@ -96,11 +101,11 @@ const Header = () => {
                   </li>
                 ))}
               </ul>
-              <div className="border-t flex border-gray-200 h-[40px]">
-                <button className="text-left px-4 py-2 text-sm text-[#FBAE17] hover:bg-gray-100 h-[40px] w-[300px] ">
+              <div className="border-t flex border-gray-200 h-[40px] lg:h-[40px] flex-col lg:flex-row ]">
+                <button className="text-left px-4 py-2 text-sm text-[#FBAE17] hover:bg-gray-100 w-full ml-5 lg:w-[50%]">
                   Mark all as read
                 </button>
-                <button className="block text-left px-4 py-2 text-sm  text-white rounded-full bg-[#14A09D]  hover:bg-teal-600">
+                <button className="block text-left px-4 py-2 text-sm text-white rounded-full bg-[#14A09D] ml-5 hover:bg-teal-600 w-auto lg:w-[50%]">
                   View all notifications
                 </button>
               </div>

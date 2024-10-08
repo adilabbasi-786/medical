@@ -38,14 +38,36 @@ const Aside = () => {
       {/* Sidebar - Visible on large screens or when toggled on mobile/tablet */}
       <aside
         className={`bg-[#F7F7F7] p-4 rounded-lg shadow-md transition-all duration-300 ease-in-out ${
-          isOpen ? "block" : "hidden"
+          isOpen ? "block w-full h-[500px]" : "hidden"
         } lg:block lg:w-64 lg:h-full lg:static`}
         style={{
-          position: isOpen ? "absolute" : "relative",
+          position: isOpen ? "fixed" : "relative",
           top: isOpen ? 0 : "auto",
+          left: isOpen ? 0 : "auto",
           zIndex: 10,
+          width: isOpen ? "100vw" : "auto",
         }}
       >
+        <button
+          onClick={toggleSidebar}
+          className="absolute top-4 lg:opacity-0 right-4 p-2 focus:outline-none text-gray-500"
+        >
+          {/* Close Icon */}
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
         {/* Categories Section */}
         <h2 className="font-semibold mb-4">Categories</h2>
         <div className="space-y-2 mb-6">

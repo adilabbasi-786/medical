@@ -11,6 +11,7 @@ import AccountProfile from "./pages/dashboard/AccountProfile/AccountProfile";
 import NotificationPrefernce from "./pages/dashboard/notification/NotificationPreference";
 import Main from "./pages/dashboard/myteams/Main";
 import SecurityPage from "./pages/dashboard/security/SecurityPage";
+import DueDateModal from "./pages/dashboard/DueDateModal";
 function App() {
   return (
     <>
@@ -23,6 +24,7 @@ function App() {
           <Route path="/faq" element={<FAQ />} />
           <Route path="/dashboard" element={<Dasboardindex />} />
           <Route path="/dashboard/profile" element={<AccountProfile />} />
+          <Route path="/dashboard/duedate" element={<DueDateModal />} />
           <Route
             path="/dashboard/profile/notification"
             element={<NotificationPrefernce />}

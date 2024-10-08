@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Aside from "./aside";
 import search from "../../assests/search.png";
 import Examcolo from "../../assests/exmple colo.png";
+import DueDateModal from "./DueDateModal";
 
 const MainContent = () => {
+  const [isDuedateModalOpen, setIsDuedateModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsDuedateModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsDuedateModalOpen(false);
+  };
   return (
     <>
       <div className="lg:flex py-6 px-6 space-y-6 lg:space-y-0 lg:space-x-8 flex-col lg:flex-row">
@@ -87,7 +97,9 @@ const MainContent = () => {
                       d="M8 7V3m8 4V3M5 12h14m-7 9v-5m-5 5h10"
                     ></path>
                   </svg>
-                  <span className="text-sm">Set due date</span>
+                  <button onClick={openModal}>
+                    <span className="text-sm">Set due date</span>
+                  </button>
                 </button>
               </div>
               <button className="p-2 bg-[#14A09D] text-white rounded-full self-center lg:self-end lg:mt-[-50px] w-full lg:w-[120px] h-[40px]">
@@ -235,6 +247,7 @@ const MainContent = () => {
           </div>
         </div>
       </div>
+      {isDuedateModalOpen && <DueDateModal closeModal={closeModal} />}
     </>
   );
 };
