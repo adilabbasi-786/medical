@@ -161,7 +161,7 @@ const Footer = () => {
                     class="py-3 px-4 block w-full rounded-lg bg-[#14A09D] text-white text-sm focus:border-white border border-white border-opacity-50 pr-10 placeholder:text-white"
                     placeholder="Enter email Address"
                   />
-                  <img src={send} alt="" class="absolute right-4 top-4" />
+                  <img src={send} alt="" class="absolute right-3 top-3" />
                 </div>
               </div>
               <p class="mt-3 text-sm text-gray-400">
