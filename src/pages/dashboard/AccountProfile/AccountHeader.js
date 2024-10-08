@@ -80,24 +80,24 @@ const Header = () => {
             <div
               className={`${
                 notificationDropdownOpen ? "block" : "hidden"
-              } absolute right-[-80px] mt-12 lg:w-[524px] w-[350px] flex flex-col bg-white shadow-lg rounded-lg py-2`}
+              } absolute right-[-80px] mt-12 lg:w-[524px] lg:h-auto h-[350px] w-[320px] flex flex-col bg-white shadow-lg border-b border-gray-300 rounded-lg py-2`}
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="dropdown-notification"
             >
-              <h3 className="px-4 py-2 text-md lg:ml-0  ml-[100px]  font-semibold text-gray-800">
+              <h3 className="px-4 py-2 text-md lg:ml-0   font-semibold text-gray-800">
                 Notifications
               </h3>
               <ul>
                 {notifications.map((notification, index) => (
                   <li
                     key={index}
-                    className=" px-1 lg:ml-0  ml-[50px] py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    className=" px-1 lg:ml-0  py-2 text-sm text-gray-700 hover:bg-gray-100 w-full"
                   >
                     <div className="flex justify-between">
                       <span>{notification.title}</span>
 
-                      <span className="text-gray-500 text-xs">
+                      <span className="text-gray-500 text-xs  lg:mr-0">
                         {notification.date}
                       </span>
                     </div>
@@ -105,10 +105,10 @@ const Header = () => {
                 ))}
               </ul>
               <div className="border-t flex border-gray-200 h-[40px] lg:h-[40px] flex-col lg:flex-row ]">
-                <button className="text-left px-4 py-2 text-sm text-[#FBAE17] hover:bg-gray-100 w-full ml-5 lg:w-[50%]">
+                <button className="text-left px-4 py-2 text-sm text-[#FBAE17] hover:bg-gray-100 w-full lg:w-[50%]">
                   Mark all as read
                 </button>
-                <button className="block text-left px-4 py-2 text-sm text-white rounded-full bg-[#14A09D] ml-5 hover:bg-teal-600 w-auto lg:w-[50%]">
+                <button className="block text-left px-4 py-2 text-sm text-white rounded-full bg-[#14A09D]  hover:bg-teal-600 w-auto lg:w-[50%]">
                   View all notifications
                 </button>
               </div>

@@ -130,8 +130,8 @@ const Main = () => {
 
                         {/* Dropdown Menu */}
                         {activeDropdown === index && (
-                          <div className="absolute right-0 mt-2 w-24 bg-white shadow-md rounded-lg z-10">
-                            <button className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100">
+                          <div className="absolute right-0 mt-2 w-34 bg-white shadow-md rounded-lg z-10 ">
+                            <button className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-200">
                               <svg
                                 className="w-4 h-4 inline-block mr-1"
                                 fill="none"
