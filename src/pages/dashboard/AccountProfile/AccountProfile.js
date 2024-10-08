@@ -26,7 +26,7 @@ const AccountProfile = () => {
                 class="w-20 h-20 rounded-full mr-4"
               />
               <div class="space-x-0 space-y-2 lg:space-x-4">
-                <button class="bg-teal-500 text-white py-2 px-4 rounded-md">
+                <button class="bg-teal-500 text-white py-2 px-4 rounded-md mr-1 ">
                   Upload
                 </button>
                 <button class="bg-[#F8242429] text-[#F82424] py-2 px-4 rounded-md">

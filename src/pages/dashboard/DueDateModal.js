@@ -31,7 +31,7 @@ const DueDateModal = ({ closeModal }) => {
               selected={selectedDate}
               onChange={(date) => setSelectedDate(date)}
               inline
-              className="border border-[#333743] rounded-lg"
+              className="custom-datepicker"
             />
           </div>
 

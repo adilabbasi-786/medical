@@ -46,7 +46,7 @@ const Header = () => {
         {/* Right-side Icons */}
         <nav className="flex items-center space-x-3">
           {/* Notification Dropdown */}
-          <div className="relative inline-flex border rounded-full ">
+          <div className="relative inline-flex border rounded-full  ">
             <button
               type="button"
               className="p-2 bg-[#14A09D] text-white rounded-full focus:outline-none"
@@ -75,9 +75,10 @@ const Header = () => {
 
             {/* Notification Dropdown content */}
             <div
+              style={{ zIndex: 999 }}
               className={`${
                 notificationDropdownOpen ? "block" : "hidden"
-              } absolute right-[-80px] mt-12 lg:w-[524px] lg:h-auto h-[350px] w-[320px] flex flex-col bg-white shadow-lg border-b border-gray-300 rounded-lg py-2`}
+              } absolute right-[-80px] mt-12  lg:w-[524px] lg:h-auto h-[350px] w-[320px] flex flex-col bg-white shadow-lg border-b border-gray-300 rounded-lg py-2`}
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="dropdown-notification"
@@ -89,12 +90,12 @@ const Header = () => {
                 {notifications.map((notification, index) => (
                   <li
                     key={index}
-                    className=" px-1 lg:ml-0  py-2 text-sm text-gray-700 hover:bg-gray-100 w-full"
+                    className=" px-1 lg:ml-0  py-2 text-sm text-gray-700 hover:bg-gray-100 w-full "
                   >
                     <div className="flex justify-between">
                       <span>{notification.title}</span>
 
-                      <span className="text-gray-500 text-xs  lg:mr-0">
+                      <span className="text-gray-500 text-xs  lg:mr-0 ">
                         {notification.date}
                       </span>
                     </div>

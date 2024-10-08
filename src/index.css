@@ -7,3 +7,32 @@ body {
 .bg-dotted {
   border-top: 2px dotted rgba(59, 130, 246, 0.5);
 }
+/* Change the background color of the selected date */
+.react-datepicker__day--selected {
+  background-color: #14a09d !important;
+  color: white; /* Optional: To ensure the text color is readable */
+}
+
+/* Make sure the date fits within the container's width and height */
+.react-datepicker__day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensures it takes full width of the container */
+  height: 100%; /* Ensures it takes full height of the container */
+}
+
+/* Optional: Add hover effect for better UX */
+.react-datepicker__day:hover {
+  background-color: #0f8b85;
+}
+/* Remove the border around the calendar */
+.react-datepicker {
+  border: none !important; /* Remove the border */
+  box-shadow: none !important; /* Optionally remove the shadow if present */
+}
+
+/* Optional: Remove border from calendar days */
+.react-datepicker__day {
+  border: none !important;
+}
